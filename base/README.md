@@ -1,0 +1,3 @@
+1 Porque as rotas de autenticação foram movidas para auth.py? Foram movidas para melhor organização de código, apesar que no padrão MVC o app.py não deve conter controladores.
+2 Como a aplicação identifica o usuário logado usando o session? A aplicação visualiza o usuário logado a partir da estruturação de login, quando o site percebe a existência de um usuário, insere dentro da session com session['usuario_id'] == usuario.id, e para as rotas protegidas é feita uma análise de que se a sessão contém a chave 'usuario_id'.
+3 Como o código impede que um usuário acesse treinos de outro usuário? A partir da comparação do atributo de usuario_id com a chave dentro da session.
